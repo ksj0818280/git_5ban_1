@@ -1,13 +1,19 @@
+{% load static %}
+
 <head>; margin: 2rem
     <meta charset="UTF-8">
     <title>Title</title>
 
+    {# bootstrap input #}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-
+    {# googlefonts input #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    {# static files link #}
+    <link rel="alternate" type="text/css" href="{% static 'base.css' %}">
 
 </head>
