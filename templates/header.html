@@ -22,13 +22,13 @@
         {% else %}
             <span>
                 <a href="{% url 'accountapp:detail' pk=user.pk %}">
-                Mypage
+                    Mypage
                 </a>
             </span>
             <span>
-            <a href="{% url 'accountapp:logout' %}">
+                <a href="{% url 'accountapp:logout' %}">
                 Logout
-            </a>
+                </a>
             </span>
         {% endif %}
     </div>
