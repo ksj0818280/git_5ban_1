@@ -10,22 +10,23 @@
         }
 
         .container div {
-                box-shadow: 0 0 .5rem grey;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 1rem;
-                flex-direction: column;
+          width: 45%;
+            max-width: 200px;
+            box-shadow: 0 0 .5rem grey;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 1rem;
+            flex-direction: column;
         }
 
         .container img {
-            width: 7rem;
-            height: 7rem;
-            object-fit: cover;
+            width: 100%;
             border-radius: 1rem;
         }
 
     </style>
+
 
     <div class="container my-4">
 
@@ -47,17 +48,16 @@
 
     {% include 'snippets/pagination.html' %}
 
-    <div class ="text-center my-5">
+    <div class="text-center my-5">
         <a href="{% url 'articleapp:create' %}"
-            class="btn btn-outline-dark rounded-pill material-icons">
+           class="btn btn-dark rounded-pill material-icons">
             brush
         </a>
         <a href="{% url 'articleapp:create' %}"
-            class="btn btn-outline-dark rounded-pill px-5">
+           class="btn btn-outline-dark rounded-pill px-5">
             Create Article
         </a>
     </div>
-
 
 
 {% endblock %}
