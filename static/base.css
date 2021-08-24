@@ -3,11 +3,11 @@
     font-family: 'Pacifico', cursive;
 }
 
-.pragmatic_header_botton {
+.pragmatic_header_button {
     margin-bottom: 2rem;
 }
 
-.pragmatic_footer_botton {
+.pragmatic_footer_button {
     font-size: 0.8rem;
     margin: 1.5rem;
 }
@@ -47,7 +47,7 @@
 }
 
 .article_content {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: left;
     margin: 2rem;
 }
@@ -66,4 +66,13 @@
         /* default font-size = 16px */
         font-size: 13px;
     }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
 }
