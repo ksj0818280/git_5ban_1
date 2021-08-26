@@ -30,7 +30,7 @@ class LikeArticleView(RedirectView):
         article.like += 1
         article.save()
         # 좋아요가 반영 O
-        messages.add.message(request, messages.SUCCESS, '좋아요가 반영되었습니다.')
+        messages.add_message(request, messages.SUCCESS, '좋아요가 반영되었습니다.')
         return super().get(request, *args, **kwargs)
 
     def get_redirect_url(self, *args, **kwargs):
