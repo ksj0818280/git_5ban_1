@@ -9,17 +9,30 @@ services:
     networks:
       - gis_5ban_network
     volumes:
-      - /home/ksj0818280/nginx.conf:/etc/nginx/nginx.conf
+      - /home/ubuntu/nginx.conf:/etc/nginx/nginx.conf
       - gis_5ban_static:/data/static/
       - gis_5ban_media:/data/media/
 
   django:
-    image: gis_5ban_django:3
+    image: gis_5ban_django:4
     networks:
       - gis_5ban_network
     volumes:
       - gis_5ban_static:/home/git_5ban_1/staticfiles/
       - gis_5ban_media:/home/git_5ban_1/media/
+
+  mariadb:
+    image: mariadb:10.5
+    networks:
+      - gis_5ban_network
+    volumes:
+      - gis_mariadb:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: password1234
+      MARIADB_DATABASE: django
+      MARIADB_USER: django
+      MARIADB_PASSWORD: password1234
+
 
 networks:
   gis_5ban_network:
@@ -27,3 +40,4 @@ networks:
 volumes:
   gis_5ban_static:
   gis_5ban_media:
+  gis_mariadb:
